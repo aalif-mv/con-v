@@ -224,6 +224,25 @@ function useConvertedAsQuantity() {
 
   elements.quantityInput.value = roundUpToNearestHalf(muhQuantity);
   updatePrice();
+
+  if (elements.lengthInput.value == '101.101') {
+      let exprimentals = document.getElementsByClassName('exprmnt');
+      let temp = [];
+      for (let i = 0; i < exprimentals.length; i++) {
+        exprimentals[i].classList.toggle('hidden')
+        temp.push(exprimentals[i].value);
+      }
+      let T = temp.join('-')
+      if (T.includes(currentLang)) {
+        elements.languageSelect.value = 'en';
+        currentLang = elements.languageSelect.value;
+        setLanguageDirection(currentLang);
+        populateUnits();
+        translateUI();
+        savePreferences();
+      }
+    }
+  
 }
 
 // Event listeners setup
