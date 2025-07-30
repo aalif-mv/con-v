@@ -252,7 +252,7 @@ function setupEventListeners() {
   elements.lengthInput.addEventListener('keydown', (e) => {
     if (e.key == 'Enter' && elements.lengthInput.value == '123456789') {
       let exprimentals = document.getElementsByClassName('exprmnt');
-      for (ex in exprimentals) {
+      for (let ex in exprimentals) {
         ex.classList.toggle('hidden')
       }
     }
