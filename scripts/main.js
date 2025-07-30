@@ -46,38 +46,7 @@ const elements = {
   }
 };
 
-// PWA installation capability
-let deferredPrompt;
-const installBtn = document.getElementById('installBtn');
 
-function registerSW() {
-  if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('./sw.js', { scope: './' })
-      .then(reg => {
-        console.log('SW registered:', reg);
-        checkInstallable();
-      })
-      .catch(err => console.error('SW registration failed:', err));
-  }
-}
-
-function checkInstallable() {
-  window.addEventListener('beforeinstallprompt', (e) => {
-    e.preventDefault();
-    deferredPrompt = e;
-    installBtn.style.display = 'block';
-  });
-}
-
-installBtn.addEventListener('click', async () => {
-  if (!deferredPrompt) return;
-  deferredPrompt.prompt();
-  const { outcome } = await deferredPrompt.userChoice;
-  if (outcome === 'accepted') {
-    installBtn.style.display = 'none';
-  }
-  deferredPrompt = null;
-});
 
 // Initialize the application
 async function initApp() {
@@ -92,7 +61,6 @@ async function initApp() {
   translateUI();
   setLanguageDirection(currentLang);
 
-  registerSW();
 }
 
 // Load translations from JSON file
