@@ -2,17 +2,16 @@
 
 const CACHE_NAME = 'con-v-v1';
 const urlsToCache = [
-  '/',
-  '/index.html',
-  '/styles/main.css',
-  '/scripts/main.js',
-  '/scripts/translations.json',
-  '/favicon/apple-touch-icon.png',
-  '/favicon/favicon-96x96.png',
-  '/favicon/favicon.ico',
-  '/favicon/favicon.svg',
-  '/favicon/web-app-manifest-192x192.png',
-  '/favicon/web-app-manifest-512x512.png'
+  'index.html',
+  'styles/main.css',
+  'scripts/main.js',
+  'scripts/translations.json',
+  'favicon/apple-touch-icon.png',
+  'favicon/favicon-96x96.png',
+  'favicon/favicon.ico',
+  'favicon/favicon.svg',
+  'favicon/web-app-manifest-192x192.png',
+  'favicon/web-app-manifest-512x512.png'
 ];
 
 // Install event
