@@ -248,6 +248,16 @@ function setupEventListeners() {
     savePreferences();
   });
 
+  // Language experimental
+  elements.lengthInput.addEventListener('keydown', (e) => {
+    if (e.key == 'Enter' && elements.lengthInput.value == '123456789') {
+      let exprimentals = document.getElementsByClassName('exprmnt');
+      for (ex in exprimentals) {
+        ex.classList.toggle('hidden')
+      }
+    }
+  })
+
   // Dark mode toggle
   elements.darkModeToggle.addEventListener('change', (e) => {
     document.body.classList.toggle('dark', e.target.checked);
