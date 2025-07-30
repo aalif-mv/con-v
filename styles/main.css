@@ -128,8 +128,8 @@ select.lang-select {
   border-bottom: 1px dotted currentColor;
   cursor: help;
 }
-#installBtn {
-  background-color: rgb(92 175 92);;
+.hidden {
+  display: none;
 }
 
 /* RTL specific styles */
