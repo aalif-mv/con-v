@@ -250,10 +250,21 @@ function setupEventListeners() {
 
   // Language experimental
   elements.lengthInput.addEventListener('keydown', (e) => {
-    if (e.key == 'Enter' && elements.lengthInput.value == '123456789') {
+    if (e.key == 'Enter' && elements.lengthInput.value == '000-000-000') {
       let exprimentals = document.getElementsByClassName('exprmnt');
-      for (let ex in exprimentals) {
-        ex.classList.toggle('hidden')
+      let temp = [];
+      for (let i = 0; i < exprimentals.length; i++) {
+        exprimentals[i].classList.toggle('hidden')
+        temp.push(exprimentals[i].value);
+      }
+      let T = temp.join('-')
+      if (T.includes(currentLang)) {
+        elements.languageSelect.value = 'en';
+        currentLang = elements.languageSelect.value;
+        setLanguageDirection(currentLang);
+        populateUnits();
+        translateUI();
+        savePreferences();
       }
     }
   })
