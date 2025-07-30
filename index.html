@@ -2,12 +2,12 @@
 <html lang="en" dir="ltr">
 <head>
   <meta name="theme-color" content="#007acc"/>
-  <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96" />
-  <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
-  <link rel="shortcut icon" href="/favicon/favicon.ico" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" href="favicon/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg" />
+  <link rel="shortcut icon" href="favicon/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
   <meta name="apple-mobile-web-app-title" content="Length & Price Calculator" />
-  <link rel="manifest" href="/favicon/site.webmanifest" crossorigin="use-credentials">
+  <link rel="manifest" href="favicon/site.webmanifest" crossorigin="use-credentials">
 
 
   <meta charset="UTF-8" />
@@ -95,7 +95,7 @@
   <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
-        navigator.serviceWorker.register('/service-worker.js')
+        navigator.serviceWorker.register('service-worker.js')
           .then(registration => {
             console.log('Service Worker registered with scope:', registration.scope);
           })
