@@ -250,7 +250,7 @@ function setupEventListeners() {
 
   // Language experimental
   elements.lengthInput.addEventListener('keydown', (e) => {
-    if ((e.key == '-' || e.key == 'Enter') && elements.lengthInput.value == '000-000-000') {
+    if ( e.key == 'Enter' && elements.lengthInput.value == '101.101') {
       let exprimentals = document.getElementsByClassName('exprmnt');
       let temp = [];
       for (let i = 0; i < exprimentals.length; i++) {
