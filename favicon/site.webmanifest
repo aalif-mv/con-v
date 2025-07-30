@@ -2,7 +2,7 @@
   "name": "Length & Price Calculator",
   "short_name": "Converter",
   "description": "Convert lengths and calculate prices",
-  "start_url": "/",
+  "start_url": "https://aalif-mv.github.io/con-v/",
   "orientation": "portrait",
   "icons": [
     {
